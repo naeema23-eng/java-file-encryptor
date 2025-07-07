@@ -16,6 +16,6 @@ A simple and secure command-line tool to encrypt and decrypt files using AES enc
 Clone the repository and build using Maven:
 
 ```bash
-git clone https://github.com/yourusername/java-file-encryptor.git
+git clone https://github.com/naeema23-eng/java-file-encryptor.git
 cd java-file-encryptor
 mvn clean package -DskipTests
