@@ -6,10 +6,15 @@ Includes optional Docker support and CI testing with GitHub Actions.
 🕹️ Features
 
 Encrypt and decrypt files securely
+
 Password-based encryption (PBKDF2 + AES)
+
 Simple command-line interface with clear logs
+
 Build with Maven and run as a standalone JAR
+
 Unit tests with GitHub Actions CI
+
 Docker support for isolated runs
 
 🛠️ Build & Run Locally
