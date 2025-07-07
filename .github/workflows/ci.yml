@@ -1,0 +1,15 @@
+    - name: Build Docker image
+      run: docker build -t java-encryptor .
+
+    - name: Run encryption in Docker
+      run: |
+        echo "This is a secret message" > input.txt
+        docker run --rm -v "$PWD":/data java-encryptor -e -i /data/input.txt -o /data/output.enc -p yourpassword
+
+    - name: Run decryption in Docker
+      run: |
+        docker run --rm -v "$PWD":/data java-encryptor -d -i /data/output.enc -o /data/output_decrypted.txt -p yourpassword
+
+    - name: Verify output
+      run: |
+        grep "This is a secret message" output_decrypted.txt
