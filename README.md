@@ -1,9 +1,11 @@
-# File Encryptor CLI (Java)
+# 🔐 File Encryptor CLI (Java)
 
-A simple and secure command-line tool to encrypt and decrypt files using AES encryption, written in Java. Includes Docker support and CI testing with GitHub Actions.
+A simple and secure command-line tool to encrypt and decrypt files using AES encryption, written in Java.  
+Includes Docker support and CI testing with GitHub Actions.
 
-## Features
+---
 
+## 🚀 Features
 - Encrypt and decrypt files securely
 - Password-based encryption (PBKDF2 + AES)
 - Simple command-line interface
@@ -11,11 +13,11 @@ A simple and secure command-line tool to encrypt and decrypt files using AES enc
 - Docker support for isolated execution
 - GitHub Actions workflow for CI
 
-## Build
+---
 
-Clone the repository and build using Maven:
+## 🔧 Build & Run Locally
 
+### Clone the repository:
 ```bash
 git clone https://github.com/naeema23-eng/java-file-encryptor.git
 cd java-file-encryptor
-mvn clean package -DskipTests
