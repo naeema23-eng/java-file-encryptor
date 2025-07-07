@@ -14,23 +14,28 @@ Docker support for isolated runs
 
 🛠️ Build & Run Locally
 
-
 🔧 Clone the repository:
 
 git clone https://github.com/naeema23-eng/java-file-encryptor.git
+
 cd java-file-encryptor
 
 🔧 Build the project with Maven:
 
 mvn clean package -DskipTests
+
 The JAR file will be generated in the target/ folder.
 
 🔧 Usage
 
 🔐 Encrypt a file:
+
 java -jar target/file-encryptor.jar -e -i data/secret.txt -p yourpassword
+
 🔒 Decrypt a file:
+
 java -jar target/file-encryptor.jar -d -i data/secret.txt.enc -p yourpassword
+
 The encrypted/decrypted files will be saved in the same folder by default.
 
 🐳 Run with Docker (Optional)
@@ -38,9 +43,11 @@ The encrypted/decrypted files will be saved in the same folder by default.
 🔧 Build the Docker image:
 
 docker build -t java-encryptor .
+
 🔐 Run encryption:
 
 docker run --rm -v "$PWD":/data java-encryptor -e -i /data/secret.txt -p yourpassword
+
 🔒 Run decryption:
 
 docker run --rm -v "$PWD":/data java-encryptor -d -i /data/secret.txt.enc -p yourpassword
@@ -52,4 +59,5 @@ mvn test
 🔢 CI Pipeline
 
 GitHub Actions workflow runs automatically on each push to run the tests.
+
 
