@@ -1,68 +1,94 @@
-🔐 File Encryptor CLI (Java)
+
+# 🔐 **File Encryptor CLI (Java)**
 
 A simple and secure command-line tool to encrypt and decrypt files using AES encryption, written in Java.
 Includes optional Docker support and CI testing with GitHub Actions.
 
-🕹️ Features
+---
 
-Encrypt and decrypt files securely
+## 🧰 **Features**
 
-Password-based encryption (PBKDF2 + AES)
+* 🔐 Encrypt and decrypt files securely
+* 🔑 Password-based encryption (PBKDF2 + AES)
+* 🖥️ Simple command-line interface with clear logs
+* 📦 Build with Maven and run as a standalone JAR
+* 🧪 Unit tests with GitHub Actions CI
+* 🐳 Docker support for isolated runs
 
-Simple command-line interface with clear logs
+---
 
-Build with Maven and run as a standalone JAR
+## 🛠️ **Build & Run Locally**
 
-Unit tests with GitHub Actions CI
+### 🔧 Clone the repository:
 
-Docker support for isolated runs
-
-🛠️ Build & Run Locally
-
-🔧 Clone the repository:
-
+```bash
 git clone https://github.com/naeema23-eng/java-file-encryptor.git
-
 cd java-file-encryptor
+```
 
-🔧 Build the project with Maven:
+### 🔧 Build the project with Maven:
 
+```bash
 mvn clean package -DskipTests
+```
 
-The JAR file will be generated in the target/ folder.
+The JAR file will be generated in the `target/` folder.
 
-🔧 Usage
+---
 
-🔐 Encrypt a file:
+## 🚀 **Usage**
 
+### 🔐 Encrypt a file:
+
+```bash
 java -jar target/file-encryptor.jar -e -i data/secret.txt -p yourpassword
+```
 
-🔒 Decrypt a file:
+### 🔓 Decrypt a file:
 
+```bash
 java -jar target/file-encryptor.jar -d -i data/secret.txt.enc -p yourpassword
+```
 
-The encrypted/decrypted files will be saved in the same folder by default.
+> 📁 Encrypted/decrypted files will be saved in the same folder by default.
 
-🐳 Run with Docker (Optional)
+---
 
-🔧 Build the Docker image:
+## 🐳 **Run with Docker (Optional)**
 
+### 🔧 Build the Docker image:
+
+```bash
 docker build -t java-encryptor .
+```
 
-🔐 Run encryption:
+### 🔐 Run encryption:
 
+```bash
 docker run --rm -v "$PWD":/data java-encryptor -e -i /data/secret.txt -p yourpassword
+```
 
-🔒 Run decryption:
+### 🔓 Run decryption:
 
+```bash
 docker run --rm -v "$PWD":/data java-encryptor -d -i /data/secret.txt.enc -p yourpassword
+```
 
-🔧 Run Tests
+---
 
+## 🧪 **Run Tests**
+
+```bash
 mvn test
+```
 
-🔢 CI Pipeline
+---
 
-GitHub Actions workflow runs automatically on each push to run the tests.
+## 🔁 **CI Pipeline**
+
+GitHub Actions workflow automatically runs on each push to compile the code and execute unit tests.
+
+
+
 
 
